@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.title {
+    display: flex;
+}
+
+.title h1 {
+    font-size: 72px;
+}
+
+.title h2 {
+    font-size: 32px;
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 92px;
+}
