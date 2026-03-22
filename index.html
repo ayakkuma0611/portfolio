@@ -11,97 +11,143 @@
 
 <body>
     <header>
+        <div class="header_wrap">
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="title">
-            <h1>Portfolio</h1>
-            <h2>Ayane<br>Takahashi</h2>
+            <p class="main">Portfolio</p>
+            <span class="line"></span>
+            <p class="name">Ayane<br>Takahashi</p>
         </div>
-        <div class="header_wrap"></div>
-        <nav class="pc_nav">
-            <ul>
-                <li><a href="#skill">SKILL</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-            </ul>
-        </nav>
-        </div>
-        <div class="theme">
-            <p>wán</p>
-            <p>玩</p>
-            <p>趣</p>
-            <p>qù</p>
-        </div>
-        <p>★☆玩趣 = 遊び心、ワクワクする楽しさ★☆</p>
-        <picture>
-            <img src="./images/mainvisual.jpg" alt="メインビジュアル">
-        </picture>
-        <picture>
-            <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
-            <img src="./images/cloud1.svg" alt="雲">
-        </picture>
 
+        <div class="mv-wrap">
+            <div class="theme">
+                <span>
+                    <span class="pinyin">wán</span>
+                    <span class="kanji">玩</span>
+                </span>
+                <span>
+                    <span class="kanji">趣</span>
+                    <span class="pinyin">qù</span>
+                </span>
+            </div>
+            <picture class="mainvisual">
+                <img src="./images/mainvisual.jpg" alt="メインビジュアル">
+            </picture>
+            <picture class="cloud1">
+                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                <img src="./images/cloud1.svg" alt="雲">
+            </picture>
+        </div>
+        <p class="catch">★☆玩趣 = 遊び心、ワクワクする楽しさ★☆</p>
     </header>
     <main>
-        <section class="SKILL" id="skill">
+        <section class=" SKILL" id="skill">
             <h1>SKILL</h1>
-            <img src="./images/skill_frame.svg" alt="吹き出し1">
+            <img class="speech_balloon1" src="./images/skill_frame.svg" alt="吹き出し1">
             <h2>できること</h2>
-            <div class="designtool">
-                <img src="./images/design.svg" alt="design">
-                <h1>デザインツール</h1>
-                <img src="./images/tool.svg" alt="tool">
-                <img src="./images/PS.svg" alt="PS">
-                <p>Photoshop</p>
-                <p>制作に合わせた基本的な画像補正や調整が可能です。</p>
-                <img src="./images/AI.svg" alt="AI">
-                <p>Illustrator</p>
-                <p>バナーやWeb用グラフィックなど、様々な制作ができます。</p>
+            <div class="design_skill">
+                <div class="designtool">
+                    <img class="design-img" src="./images/design.svg" alt="design">
+                    <p class="section-title">デザインツール</p>
+                    <img class="tool-img" src="./images/tool.svg" alt="tool">
+                </div>
+                <div class="graph_text">
+                    <div class="item">
+                        <img class="graph" src="./images/PS.svg" alt="PS">
+                        <div class="about_skill">
+                            <p class="title">Photoshop</p>
+                            <p class="skill_text">制作に合わせた基本的な画像補正や<br>調整が可能です。</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="graph" src="./images/AI.svg" alt="AI">
+                        <div class="about_skill">
+                            <p class="title">Illustrator</p>
+                            <p class="skill_text">バナーやWeb用グラフィックなど、<br>様々な制作ができます。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="programming">
-                <img src="./images/programming.svg" alt="programming">
-                <h1>コーディング言語</h1>
-                <img src="./images/language.svg" alt="language">
-                <img src="./images/HTML.svg" alt="HTML">
-                <p>HTML</p>
-                <p>見出しや文章、画像などを使用し、基本的なWebページの構造を組むことができます。</p>
-                <img src="./images/CSS.svg" alt="CSS">
-                <p>CSS</p>
-                <p>レイアウト調整やレスポンシブ対応など、見た目を整えることができます。</p>
-                <img src="./images/JS.svg" alt="JS">
-                <p>JavaScript</p>
-                <p>スライダーやハンバーガーメニューなど、基本的な動きの実装が可能です。</p>
+            <div class="programming_skill">
+                <div class="programming_language">
+                    <img class="programming-img" src=" ./images/programming.svg" alt="programming">
+                    <p class="section-title">コーディング言語</p>
+                    <img class="language-img" src="./images/language.svg" alt="language">
+                </div>
+                <div class="graph_text">
+                    <div class="item">
+                        <img class="graph" src="./images/HTML.svg" alt="HTML">
+                        <div class="about_skill">
+                            <p class="title">HTML</p>
+                            <p class="skill_text">見出しや文章、画像などを使用し、<br>基本的なWebページの構造を組む<br>ことができます。</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="graph" src="./images/CSS.svg" alt="CSS">
+                        <div class="about_skill">
+                            <p class="title">CSS</p>
+                            <p class="skill_text">レイアウト調整やレスポンシブ対応な<br>ど、見た目を整えることができます。</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="graph" src="./images/JS.svg" alt="JS">
+                        <div class="about_skill">
+                            <p class="title">JavaScript</p>
+                            <p class="skill_text">スライダーやハンバーガーメニューな<br>ど、基本的な動きの実装が可能です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             </div>
             <img src="./images/fish.png" alt="背景イラスト">
         </section>
 
         <section class="WORKS" id="works">
             <h1>WORKS</h1>
-            <img src="./images/works_frame.svg" alt="吹き出し2">
+            <img class="speech_balloon2" src="./images/works_frame.svg" alt="吹き出し2">
             <h2>つくったもの</h2>
             <div class="slider">
-                <div class="item"><img src="./images/kadai_takahashi_01.jpg"></div>
-                <div class="item"><img src="./images/kadai2_takahashi_3.jpg"></div>
-                <div class="item"><img src="./images/burger_01.jpg"></div>
-                <div class="item"><img src="./images/burger_02.jpg"></div>
-                <div class="item"><img src="./images/burger_pop_01.jpg"></div>
-                <div class="item"><img src="./images/burger_pop_02.jpg"></div>
+                <div class="work"><img src="./images/kadai_takahashi_01.jpg"></div>
+                <div class="work"><img src="./images/kadai2_takahashi_3.jpg"></div>
+                <div class="work"><img src="./images/burger_01.jpg"></div>
+                <div class="work"><img src="./images/burger_02.jpg"></div>
+                <div class="work"><img src="./images/burger_pop_01.jpg"></div>
+                <div class="work"><img src="./images/burger_pop_02.jpg"></div>
             </div>
-            <img src="./images/right_arrow.svg" alt="→">
-            <img src="./images/left_arrow.svg" alt="←">
+            <img class="arrow" src="./images/left_arrow.svg" alt="←">
+            <img class="arrow" src="./images/right_arrow.svg" alt="→">
+
+
         </section>
 
         <section class="ABOUT" id="about">
             <h1>ABOUT</h1>
-            <img src="./images/abou_frame.svg" alt="吹き出し3">
+            <img class="speech_balloon3" src="./images/abou_frame.svg" alt="吹き出し3">
             <h2>わたしについて</h2>
             <img src="./images/bird1.png" alt="青い鳥">
             <div class="profile">
-                <img src="./images/about-80.jpg" alt="自分の写真">
-                <img src="./images/cloud_about.svg" alt="">
-                <p>Ayane Takahashi</p>
-                <p>高橋</p>
+                <img class="profile-img" src="./images/about-80.jpg" alt="自分の写真">
+                <img class="blue_cloud" src="./images/cloud_about.svg" alt="青い雲">
+
+                <div class="NAME">
+                    <p class="kana">Ayane Takahashi</p>
+                    <p class="lastname">高橋</p>
+                    <p class="firstname">綾音</p>
+                </div>
                 <img src="./images/bird2.png" alt="黄色い鳥">
-                <p>綾音</p>
-                <p>1999年生まれ。愛知県出身。<br>
+
+                <p class="profile_text">1999年生まれ。愛知県出身。<br>
                     子供のころ憧れていたクリエイティブな仕事に向け<br>
                     再チャレンジしたいと思い、2025年12月より<br>
                     オンラインスクールにてWebデザインを学び始めました。<br>
@@ -111,13 +157,12 @@
                     考察したり想像しながら楽しむことが好きです。</p>
             </div>
             <div class="hobby">
-                <p>少し、絵も描きます。</p>
-                <p>思いついたものをそのまま線にするのがすきで、<br>気づいたらノートの端やiPadに落書きをしています。</p>
-
-                <p>上手さよりも「今の気分」。<br>ゆるく、ちょっとした遊び心を忍ばせるのがたのしいです。</p>
-                <img src="./images/fuji.svg" alt="富士">
-                <img src="./images/nasu.svg" alt="茄子">
-                <img src="./images/beko.svg" alt="べこ">
+                <p class="hobby_text1">少し、絵も描きます。</p>
+                <p class="hobby_text2">思いついたものをそのまま線にするのがすきで、<br>気づいたらノートの端やiPadに落書きをしています。</p>
+                <p class="hobby_text3">上手さよりも「今の気分」。<br>ゆるく、ちょっとした遊び心を忍ばせるのがたのしいです。</p>
+                <img class="fuji" src="./images/fuji.svg" alt="富士">
+                <img class="nasu" src="./images/nasu.svg" alt="茄子">
+                <img class="beko" src="./images/beko.svg" alt="べこ">
             </div>
             <div class="sweat">
                 <img src="./" alt="スウェットの写真1">
@@ -141,7 +186,7 @@
 
     </main>
     <footer>
-        <img src="./images/cloud2.svg" alt="白い雲">
+
         <h1>CONTACT</h1>
         <p>↓↓↓お気軽にご連絡ください↓↓↓</p>
         <p>
@@ -152,6 +197,7 @@
         <div class="copyright">
             <p>©2026ayanetakahashi</p>
         </div>
+        <img src="./images/cloud2.svg" alt="白い雲">
     </footer>
 
 </body>

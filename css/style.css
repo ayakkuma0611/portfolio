@@ -1,18 +1,288 @@
 @charset "utf-8";
 
-.title {
-    display: flex;
+body {
+    background-color: #ebebeb;
+    color: #280db2;
 }
 
-.title h1 {
+/* 各項目のタイトル */
+h1 {
     font-size: 72px;
+    letter-spacing: 0.2em
 }
 
-.title h2 {
-    font-size: 32px;
+h2 {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #e52e8e;
+}
+
+.speech_balloon1 {
+    width: 205px;
+}
+
+.speech_balloon2 {
+    width: 250px;
+}
+
+.speech_balloon3 {
+    width: 240px;
+}
+
+/* -----------MAIN VISUAL ------------*/
+.pc_nav {
+    margin-top: 40px;
+    margin-right: 70px;
 }
 
 .pc_nav ul {
     display: flex;
     gap: 92px;
+    justify-content: flex-end;
+    letter-spacing: 0.12em;
+    font-size: 16px;
+}
+
+.main {
+    font-size: 72px;
+    margin: 0;
+}
+
+.name {
+    font-size: 32px;
+    margin: 0;
+    margin-left: 43px;
+}
+
+.main {
+    margin-right: 43px;
+}
+
+
+.line {
+    width: 2px;
+    height: 57px;
+    background-color: #000;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.12em
+}
+
+
+.mv-wrap {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mainvisual img {
+    width: 100%;
+    display: block;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cloud1 img {
+    width: 1500px;
+    max-width: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.theme {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.theme>span {
+    display: flex;
+    align-items: center;
+}
+
+.pinyin {
+    font-size: 48px;
+}
+
+.kanji {
+    font-size: 280px;
+}
+
+.catch {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* --------------SKILL --------------*/
+
+
+.design-img {
+    width: 300px;
+    padding-bottom: 70px;
+}
+
+.tool-img {
+    width: 195px;
+    padding-top: 70px;
+}
+
+.programming-img {
+    width: 385px;
+    padding-bottom: 86px;
+}
+
+.language-img {
+    width: 279px;
+    padding-top: 86px;
+}
+
+.section-title {
+    font-size: 32px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px dotted #000;
+}
+
+.graph\&text .item:last-of-type {
+    border-bottom: none;
+}
+
+
+.graph {
+    width: 150px;
+}
+
+.title {
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.skill_text {
+    font-size: 12px;
+}
+
+.about_skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.design_skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.design_skill {
+    display: flex;
+    align-items: center;
+}
+
+.programming_skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.designtool {
+    text-align: center;
+    padding-right: 120px;
+}
+
+.programming_language {
+    text-align: center;
+    padding-right: 64px;
+}
+
+/* --------------WORKS-------------- */
+.arrow {
+    width: 65px;
+}
+
+.slider {
+    display: flex;
+}
+
+/* --------------ABOUT------------- */
+.NAME {
+    color: #fff;
+}
+
+.kana {
+    font-size: 24px;
+}
+
+.lastname {
+    font-size: 100px;
+}
+
+.firstname {
+    font-size: 100px;
+}
+
+.profile-img {
+    max-width: 500px;
+    width: 35%;
+}
+
+.blue_cloud {
+    width: 890px;
+}
+
+.profile_text {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.hobby_text1 {
+    font-size: 48px;
+    letter-spacing: 0.2em;
+}
+
+.hobby_text2,
+.hobby_text3 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.fuji {
+    width: 30%;
+}
+
+.nasu {
+    width: 5%;
+}
+
+.beko {
+    width: 13%;
+}
+
+/* ------------CONTACT--------------- */
+footer {
+    background-color: #280db2;
+    color: #fff;
+    text-align: center;
 }
