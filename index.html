@@ -12,6 +12,10 @@
 <body>
     <header>
         <div class="header_wrap">
+            <div class="decoration">
+                <p>遊</p>
+            </div>
+            <span class="top_line"></span>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#skill">SKILL</a></li>
@@ -20,38 +24,48 @@
                 </ul>
             </nav>
         </div>
-        <div class="title">
-            <p class="main">Portfolio</p>
-            <span class="line"></span>
-            <p class="name">Ayane<br>Takahashi</p>
-        </div>
-
-        <div class="mv-wrap">
-            <div class="theme">
-                <span>
-                    <span class="pinyin">wán</span>
-                    <span class="kanji">玩</span>
-                </span>
-                <span>
-                    <span class="kanji">趣</span>
-                    <span class="pinyin">qù</span>
-                </span>
+        <div class="mv_area">
+            <div class="title">
+                <p class="main">Portfolio</p>
+                <span class="line"></span>
+                <p class="name">Ayane<br>Takahashi</p>
             </div>
-            <picture class="mainvisual">
-                <img src="./images/mainvisual.jpg" alt="メインビジュアル">
-            </picture>
-            <picture class="cloud1">
-                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
-                <img src="./images/cloud1.svg" alt="雲">
-            </picture>
+
+            <div class="mv-wrap">
+                <div class="theme">
+                    <span>
+                        <span class="pinyin">wán</span>
+                        <span class="kanji">玩</span>
+                    </span>
+                    <span>
+                        <span class="kanji">趣</span>
+                        <span class="pinyin">qù</span>
+                    </span>
+                </div>
+                <picture class="mainvisual">
+                    <img src="./images/mainvisual.jpg" alt="メインビジュアル">
+                </picture>
+                <picture class="cloud1">
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="./images/cloud1.svg" alt="雲">
+                </picture>
+            </div>
+            <p class="catch">★☆玩趣 = 遊び心、ワクワクする楽しさ★☆</p>
         </div>
-        <p class="catch">★☆玩趣 = 遊び心、ワクワクする楽しさ★☆</p>
+        <div class="decoration">
+            <div class="mv_bottom_deco">
+                <p>遊</p>
+                <p>遊</p>
+            </div>
+        </div>
     </header>
     <main>
         <section class=" SKILL" id="skill">
             <h1>SKILL</h1>
-            <img class="speech_balloon1" src="./images/skill_frame.svg" alt="吹き出し1">
-            <h2>できること</h2>
+            <div class="speech_wrap1">
+                <img class="speech_balloon1" src="./images/skill_frame.svg" alt="吹き出し1">
+                <h2>できること</h2>
+            </div>
             <div class="design_skill">
                 <div class="designtool">
                     <img class="design-img" src="./images/design.svg" alt="design">
@@ -110,13 +124,15 @@
             </div>
 
             </div>
-            <img src="./images/fish.png" alt="背景イラスト">
+
         </section>
 
         <section class="WORKS" id="works">
             <h1>WORKS</h1>
-            <img class="speech_balloon2" src="./images/works_frame.svg" alt="吹き出し2">
-            <h2>つくったもの</h2>
+            <div class="speech_wrap2">
+                <img class="speech_balloon2" src="./images/works_frame.svg" alt="吹き出し2">
+                <h2>つくったもの</h2>
+            </div>
             <div class="slider">
                 <div class="work"><img src="./images/kadai_takahashi_01.jpg"></div>
                 <div class="work"><img src="./images/kadai2_takahashi_3.jpg"></div>
@@ -133,28 +149,38 @@
 
         <section class="ABOUT" id="about">
             <h1>ABOUT</h1>
-            <img class="speech_balloon3" src="./images/abou_frame.svg" alt="吹き出し3">
-            <h2>わたしについて</h2>
-            <img src="./images/bird1.png" alt="青い鳥">
+            <div class="speech_wrap3">
+                <img class="speech_balloon3" src="./images/abou_frame.svg" alt="吹き出し3">
+                <h2>わたしについて</h2>
+            </div>
+            <div class="lovebird">
+                <img src="./images/bird1.png" alt="青い鳥">
+                <img src="./images/bird1.png" alt="青い鳥">
+                <img src="./images/bird1.png" alt="青い鳥">
+                <img src="./images/bird1.png" alt="青い鳥">
+                <img src="./images/bird1.png" alt="青い鳥">
+                <img src="./images/bird1.png" alt="青い鳥">
+            </div>
             <div class="profile">
                 <img class="profile-img" src="./images/about-80.jpg" alt="自分の写真">
-                <img class="blue_cloud" src="./images/cloud_about.svg" alt="青い雲">
-
-                <div class="NAME">
+                <div class="profile_name">
                     <p class="kana">Ayane Takahashi</p>
-                    <p class="lastname">高橋</p>
-                    <p class="firstname">綾音</p>
-                </div>
-                <img src="./images/bird2.png" alt="黄色い鳥">
+                    <div class="NAME">
+                        <img class="blue_cloud" src="./images/cloud_about.svg" alt="青い雲">
+                        <p class="lastname">高橋</p>
+                        <p class="firstname">綾音</p>
+                        <img class="cockatiel" src="./images/bird2.png" alt="黄色い鳥">
+                    </div>
+                    <p class="profile_text">1999年生まれ。愛知県出身。<br>
+                        子供のころ憧れていたクリエイティブな仕事に向け<br>
+                        再チャレンジしたいと思い、2025年12月より<br>
+                        オンラインスクールにてWebデザインを学び始めました。<br>
+                        座右の銘をあえて持たない、柔軟な人間でいることが座右の銘。<br>
+                        映画鑑賞や美術館が好きで、作品そのものだけでなく、<br>
+                        作者の想いや登場人物の感情や価値観などの背景について、<br>
+                        考察したり想像しながら楽しむことが好きです。</p>
 
-                <p class="profile_text">1999年生まれ。愛知県出身。<br>
-                    子供のころ憧れていたクリエイティブな仕事に向け<br>
-                    再チャレンジしたいと思い、2025年12月より<br>
-                    オンラインスクールにてWebデザインを学び始めました。<br>
-                    座右の銘をあえて持たない、柔軟な人間でいることが座右の銘。<br>
-                    映画鑑賞や美術館が好きで、作品そのものだけでなく、<br>
-                    作者の想いや登場人物の感情や価値観などの背景について、<br>
-                    考察したり想像しながら楽しむことが好きです。</p>
+                </div>
             </div>
             <div class="hobby">
                 <p class="hobby_text1">少し、絵も描きます。</p>
@@ -170,16 +196,21 @@
                     <br>キラキラしたお顔に反する毒舌で独特な思考をもつ彼女にピッタリな
                     <br>毒々しいカラーがポイントです。
                 </p>
-                <img src="./images/dog.png" alt="犬の切り抜き">
-                <img src="./images/dog.png" alt="犬の切り抜き">
-                <img src="./images/dog.png" alt="犬の切り抜き">
+                <div class="dog">
+                    <img class="dog3" src="./images/dog.png" alt="犬の切り抜き">
+                    <img class="dog2" src="./images/dog.png" alt="犬の切り抜き">
+                    <img class="dog1" src="./images/dog.png" alt="犬の切り抜き">
+
+                </div>
                 <img src="./images/sweat1-80.jpg" alt="スウェットの写真2">
-                <p>下前歯の歯並びが組体操の扇みたいでかわいいね。と言ったところ、<br>
+                <p class="sweat1_text">下前歯の歯並びが組体操の扇みたいでかわいいね。と言ったところ、<br>
                     なんだか嬉しそうでした。そんな川原さんの歯並び再現スウェット。<br>
                     大変気に入ってくれましたが、ちょっと歯の主張が強いのでパジャマ行きです。 </p>
-                <img src="./images/mouth.png" alt="口の切り抜き">
-                <img src="./images/mouth.png" alt="口の切り抜き">
-                <img src="./images/mouth.png" alt="口の切り抜き">
+                <div class="mouth">
+                    <img class="mouth1" src="./images/mouth.png" alt="口の切り抜き">
+                    <img class="mouth2" src="./images/mouth.png" alt="口の切り抜き">
+                    <img class="mouth3" src="./images/mouth.png" alt="口の切り抜き">
+                </div>
             </div>
         </section>
 
@@ -187,8 +218,8 @@
     </main>
     <footer>
 
-        <h1>CONTACT</h1>
-        <p>↓↓↓お気軽にご連絡ください↓↓↓</p>
+        <h1 class="footer_title">CONTACT</h1>
+        <p class="footer_text">↓↓↓お気軽にご連絡ください↓↓↓</p>
         <p>
             <a href="mailto:ayane1999takahashi@gmail.com">
                 ayane1999takahashi@gmail.com
@@ -197,11 +228,9 @@
         <div class="copyright">
             <p>©2026ayanetakahashi</p>
         </div>
-        <img src="./images/cloud2.svg" alt="白い雲">
+        <img class="cloud3" src="./images/cloud2.svg" alt="白い雲">
     </footer>
 
 </body>
 
 </html>
-
-<img src="./" alt="">

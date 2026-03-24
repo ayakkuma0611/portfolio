@@ -5,6 +5,46 @@ body {
     color: #280db2;
 }
 
+/* ------文字装飾と仕切り線----- */
+.mv_area {
+    position: relative;
+}
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 845px;
+    background-color: #280db2;
+}
+
+header::before {
+    left: 4%;
+}
+
+header::after {
+    right: 4%;
+}
+
+.top_line {
+    background-color: #280db2;
+    width: 60%;
+    height: 1px;
+}
+
+.decoration {
+    font-size: 48px;
+    color: #d11c66;
+
+}
+
+.mv_bottom_deco {
+    display: flex;
+    gap: 91%;
+}
+
 /* 各項目のタイトル */
 h1 {
     font-size: 72px;
@@ -30,15 +70,17 @@ h2 {
 }
 
 /* -----------MAIN VISUAL ------------*/
-.pc_nav {
-    margin-top: 40px;
-    margin-right: 70px;
+.header_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    padding-top: 25px;
 }
 
 .pc_nav ul {
     display: flex;
     gap: 92px;
-    justify-content: flex-end;
     letter-spacing: 0.12em;
     font-size: 16px;
 }
@@ -62,7 +104,7 @@ h2 {
 .line {
     width: 2px;
     height: 57px;
-    background-color: #000;
+    background-color: #d11c66;
 }
 
 .title {
@@ -74,30 +116,23 @@ h2 {
 
 .mv-wrap {
     position: relative;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .mainvisual img {
-    width: 100%;
+    width: 90%;
     display: block;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .cloud1 {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.cloud1 img {
-    width: 1500px;
-    max-width: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 .theme {
@@ -105,7 +140,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 2;
@@ -128,10 +163,34 @@ h2 {
     font-size: 18px;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 88px;
+}
+
+.mv_bottom_deco {
+    display: flex;
 }
 
 /* --------------SKILL --------------*/
+.SKILL {
+    background-image: url("../images/fish.png");
+    background-position: bottom -80px;
 
+}
+
+.speech_wrap1 {
+    position: relative;
+    padding-top: 28px;
+}
+
+.speech_balloon1 {
+    display: block;
+}
+
+.speech_wrap1 h2 {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
 
 .design-img {
     width: 300px;
@@ -158,6 +217,7 @@ h2 {
 }
 
 .item {
+    width: 400px;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -166,10 +226,9 @@ h2 {
     border-bottom: 1px dotted #000;
 }
 
-.graph\&text .item:last-of-type {
+.graph_text .item:last-of-type {
     border-bottom: none;
 }
-
 
 .graph {
     width: 150px;
@@ -193,31 +252,49 @@ h2 {
 .design_skill {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.design_skill {
-    display: flex;
-    align-items: center;
+    max-width: 900px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    margin-top: 54px;
 }
 
 .programming_skill {
     display: flex;
     align-items: center;
-    justify-content: center;
+    max-width: 900px;
+    background-color: #fff;
+    margin: 0 auto;
 }
 
 .designtool {
     text-align: center;
-    padding-right: 120px;
+    padding-left: 66px;
+    padding-right: 84px;
 }
 
 .programming_language {
     text-align: center;
-    padding-right: 64px;
+    padding-left: 37px;
+    padding-right: 30px;
 }
 
 /* --------------WORKS-------------- */
+.speech_wrap2 {
+    position: relative;
+    padding-top: 28px;
+}
+
+.speech_balloon2 {
+    display: block;
+}
+
+.speech_wrap2 h2 {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
 .arrow {
     width: 65px;
 }
@@ -227,29 +304,72 @@ h2 {
 }
 
 /* --------------ABOUT------------- */
+.speech_wrap3 {
+    position: relative;
+    padding-top: 28px;
+}
+
+.speech_balloon3 {
+    display: block;
+}
+
+.speech_wrap3 h2 {
+    position: absolute;
+    top: 70px;
+    left: 40px;
+}
+
+.lovebird {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
 .NAME {
+    position: relative;
     color: #fff;
 }
 
 .kana {
     font-size: 24px;
+    position: absolute;
+
 }
 
 .lastname {
-    font-size: 100px;
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    font-size: clamp(58px, 6vw, 100px);
 }
 
 .firstname {
-    font-size: 100px;
+    position: absolute;
+    top: 125px;
+    left: 320px;
+    font-size: clamp(58px, 6vw, 100px);
 }
 
 .profile-img {
-    max-width: 500px;
     width: 35%;
+    max-width: 500px;
+    height: auto;
 }
 
 .blue_cloud {
-    width: 890px;
+    max-width: 890px;
+    width: 62vw;
+}
+
+.cockatiel {
+    position: absolute;
+    top: -45px;
+    right: 200px;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
 }
 
 .profile_text {
@@ -280,9 +400,112 @@ h2 {
     width: 13%;
 }
 
+.sweat1_text {
+    background-color: #fff;
+    display: inline;
+    padding: 4px 6px;
+    line-height: 2;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.dog {
+    position: relative;
+}
+
+.dog img {
+    position: absolute;
+}
+
+.dog1 {
+    max-width: 292px;
+    width: 20vw;
+    top: 0vw;
+    left: 0vw;
+
+}
+
+.dog2 {
+    max-width: 232px;
+    width: 16vw;
+    top: -1vw;
+    left: 8vw;
+}
+
+.dog3 {
+    max-width: 176px;
+    width: 12vw;
+    top: -2vw;
+    left: 14vw;
+}
+
+.mouth {
+    position: relative;
+    width: 300px;
+}
+
+.mouth img {
+    position: absolute;
+}
+
+.mouth1 {
+    max-width: 226px;
+    width: 12vw;
+    top: 0;
+    left: 0;
+}
+
+.mouth2 {
+    max-width: 253px;
+    width: 15vw;
+    top: -4vw;
+    left: 3vw;
+}
+
+.mouth3 {
+    max-width: 292px;
+    width: 20vw;
+    top: -8vw;
+    left: 7vw;
+}
+
+
 /* ------------CONTACT--------------- */
+.cloud3 {
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -105%);
+}
+
 footer {
     background-color: #280db2;
     color: #fff;
     text-align: center;
+}
+
+.footer_title {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px 0;
+    display: inline-block;
+    margin-top: 92px;
+}
+
+.footer_text {
+    font-size: 24px;
+    margin-top: 80px;
+}
+
+footer a {
+    font-size: 16px;
+    border: 1px solid #fff;
+    padding: 22px 102px;
+    display: inline-block;
+    margin-top: 80px;
+}
+
+.copyright {
+    font-size: 12px;
+    padding-top: 40px;
+    padding-bottom: 28px;
 }
