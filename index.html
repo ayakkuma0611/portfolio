@@ -7,15 +7,28 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'vhf4udr',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="header_wrap">
-            <div class="decoration">
+            <span class="decoration">
                 <p>遊</p>
-            </div>
-            <span class="top_line"></span>
+            </span>
+            <span class="mv_topline"></span>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#skill">SKILL</a></li>
@@ -53,14 +66,21 @@
             <p class="catch">★☆玩趣 = 遊び心、ワクワクする楽しさ★☆</p>
         </div>
         <div class="decoration">
-            <div class="mv_bottom_deco">
+            <span class="text_deco">
                 <p>遊</p>
                 <p>遊</p>
-            </div>
+            </span>
+            <span class="bottomline"></span>
         </div>
     </header>
     <main>
-        <section class=" SKILL" id="skill">
+        <section class="SKILL" id="skill">
+            <div class="decoration">
+                <span class="text_deco">
+                    <p>技</p>
+                    <p>技</p>
+                </span>
+            </div>
             <h1>SKILL</h1>
             <div class="speech_wrap1">
                 <img class="speech_balloon1" src="./images/skill_frame.svg" alt="吹き出し1">
@@ -122,12 +142,22 @@
                     </div>
                 </div>
             </div>
-
+            <div class="decoration">
+                <span class="text_deco">
+                    <p>技</p>
+                    <p>技</p>
+                </span>
+                <span class="bottomline"></span>
             </div>
-
         </section>
 
         <section class="WORKS" id="works">
+            <div class="decoration">
+                <span class="text_deco">
+                    <p>作</p>
+                    <p>作</p>
+                </span>
+            </div>
             <h1>WORKS</h1>
             <div class="speech_wrap2">
                 <img class="speech_balloon2" src="./images/works_frame.svg" alt="吹き出し2">
@@ -143,11 +173,22 @@
             </div>
             <img class="arrow" src="./images/left_arrow.svg" alt="←">
             <img class="arrow" src="./images/right_arrow.svg" alt="→">
-
-
+            <div class="decoration">
+                <span class="text_deco">
+                    <p>作</p>
+                    <p>作</p>
+                </span>
+                <span class="bottomline"></span>
+            </div>
         </section>
 
         <section class="ABOUT" id="about">
+            <div class="decoration">
+                <span class="text_deco">
+                    <p>私</p>
+                    <p>私</p>
+                </span>
+            </div>
             <h1>ABOUT</h1>
             <div class="speech_wrap3">
                 <img class="speech_balloon3" src="./images/abou_frame.svg" alt="吹き出し3">
@@ -211,6 +252,13 @@
                     <img class="mouth2" src="./images/mouth.png" alt="口の切り抜き">
                     <img class="mouth3" src="./images/mouth.png" alt="口の切り抜き">
                 </div>
+            </div>
+            <div class="decoration">
+                <span class="text_deco">
+                    <p>私</p>
+                    <p>私</p>
+                </span>
+                <span class="bottomline"></span>
             </div>
         </section>
 

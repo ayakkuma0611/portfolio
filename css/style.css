@@ -3,58 +3,116 @@
 body {
     background-color: #ebebeb;
     color: #280db2;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* ------文字装飾と仕切り線----- */
-.mv_area {
+.mv_area,
+section {
+    position: relative;
+}
+
+header,
+section {
     position: relative;
 }
 
 header::before,
-header::after {
+header::after,
+section::before,
+section::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 100px;
     width: 1px;
-    height: 845px;
+    height: 85%;
     background-color: #280db2;
 }
 
-header::before {
+header::before,
+section::before {
     left: 4%;
 }
 
-header::after {
+header::after,
+section::after {
     right: 4%;
 }
 
-.top_line {
+.mv_topline {
     background-color: #280db2;
     width: 60%;
     height: 1px;
 }
 
+.bottomline {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #280db2;
+    width: 83%;
+    height: 1px;
+}
+
+section::before,
+section::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #280db2;
+}
+
+section::before {
+    left: 4%;
+}
+
+section::after {
+    right: 4%;
+}
+
+.SKILL::before,
+.SKILL::after {
+    top: 100px;
+    height: 85%;
+}
+
 .decoration {
-    font-size: 48px;
+    font-size: clamp(16px, 5vw, 48px);
     color: #d11c66;
-
+    font-family: 'DotGothic16', sans-serif;
 }
 
-.mv_bottom_deco {
+.text_deco {
+    margin-left: 3%;
     display: flex;
-    gap: 91%;
+    gap: 92%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+section {
+    position: relative;
+}
+
 
 /* 各項目のタイトル */
 h1 {
     font-size: 72px;
-    letter-spacing: 0.2em
+    letter-spacing: 0.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 h2 {
     font-size: 20px;
     letter-spacing: 0.1em;
     color: #e52e8e;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.title,
+section h1 {
+    margin-left: 15%;
 }
 
 .speech_balloon1 {
@@ -83,17 +141,27 @@ h2 {
     gap: 92px;
     letter-spacing: 0.12em;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.12em;
 }
 
 .main {
     font-size: 72px;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.12em;
 }
 
 .name {
     font-size: 32px;
     margin: 0;
     margin-left: 43px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.12em;
+
 }
 
 .main {
@@ -144,6 +212,9 @@ h2 {
     display: flex;
     justify-content: space-between;
     z-index: 2;
+    font-family: "fot-udkakugoc60-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .theme>span {
@@ -164,6 +235,7 @@ h2 {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 88px;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 .mv_bottom_deco {
@@ -214,6 +286,7 @@ h2 {
 
 .section-title {
     font-size: 32px;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 .item {
@@ -237,6 +310,9 @@ h2 {
 .title {
     font-size: 20px;
     padding-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.12em;
 }
 
 .skill_text {
@@ -333,7 +409,9 @@ h2 {
 .kana {
     font-size: 24px;
     position: absolute;
-
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.12em;
 }
 
 .lastname {
@@ -469,12 +547,16 @@ h2 {
     left: 7vw;
 }
 
+main {
+    margin-bottom: 56px;
+}
 
 /* ------------CONTACT--------------- */
 .cloud3 {
     width: 100%;
     position: absolute;
     transform: translate(-50%, -105%);
+    pointer-events: none;
 }
 
 footer {
@@ -494,6 +576,7 @@ footer {
 .footer_text {
     font-size: 24px;
     margin-top: 80px;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 footer a {
@@ -502,10 +585,16 @@ footer a {
     padding: 22px 102px;
     display: inline-block;
     margin-top: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.12em;
 }
 
 .copyright {
     font-size: 12px;
     padding-top: 40px;
     padding-bottom: 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.12em;
 }
