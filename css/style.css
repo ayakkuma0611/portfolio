@@ -25,7 +25,7 @@ section::after {
     position: absolute;
     top: 10%;
     width: 1px;
-    height: 85%;
+    height: 80%;
     background-color: #280db2;
 }
 
@@ -81,6 +81,14 @@ section::after {
     font-size: clamp(16px, 5vw, 48px);
     color: #d11c66;
     font-family: 'DotGothic16', sans-serif;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.top_textdeco {
+    margin-bottom: 30%;
+    margin-left: 40%;
 }
 
 .text_deco {
@@ -229,11 +237,11 @@ section h1 {
 }
 
 .pinyin {
-    font-size: 48px;
+    font-size: clamp(20px, 7vw, 48px);
 }
 
 .kanji {
-    font-size: 280px;
+    font-size: clamp(150px, 20vw, 280px);
 }
 
 .catch {
@@ -381,9 +389,6 @@ section h1 {
     width: 65px;
 }
 
-.slider {
-    display: flex;
-}
 
 /* --------------ABOUT------------- */
 .speech_wrap3 {

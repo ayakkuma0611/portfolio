@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -25,9 +29,11 @@
 <body>
     <header>
         <div class="header_wrap">
-            <span class="decoration">
-                <p>遊</p>
-            </span>
+            <div class="decoration">
+                <span class="top_textdeco">
+                    遊
+                </span>
+            </div>
             <span class="mv_topline"></span>
             <nav class="pc_nav">
                 <ul>
@@ -79,8 +85,9 @@
         <section class="SKILL" id="skill">
             <div class="decoration">
                 <span class="text_deco">
-                    <p>技</p>
-                    <p>技</p>
+                    技</span>
+                <span class="text_deco">
+                    技
                 </span>
             </div>
             <h1>SKILL</h1>
@@ -146,8 +153,9 @@
             </div>
             <div class="decoration">
                 <span class="text_deco">
-                    <p>技</p>
-                    <p>技</p>
+                    技</span>
+                <span class="text_deco">
+                    技
                 </span>
                 <span class="bottomline"></span>
             </div>
@@ -156,8 +164,10 @@
         <section class="WORKS" id="works">
             <div class="decoration">
                 <span class="text_deco">
-                    <p>作</p>
-                    <p>作</p>
+                    作
+                </span>
+                <span class="text_deco">
+                    作
                 </span>
             </div>
             <h1>WORKS</h1>
@@ -177,8 +187,10 @@
             <img class="arrow" src="./images/right_arrow.svg" alt="→">
             <div class="decoration">
                 <span class="text_deco">
-                    <p>作</p>
-                    <p>作</p>
+                    作
+                </span>
+                <span class="text_deco">
+                    作
                 </span>
                 <span class="bottomline"></span>
             </div>
@@ -187,8 +199,10 @@
         <section class="ABOUT" id="about">
             <div class="decoration">
                 <span class="text_deco">
-                    <p>私</p>
-                    <p>私</p>
+                    私
+                </span>
+                <span class="text_deco">
+                    私
                 </span>
             </div>
             <h1>ABOUT</h1>
@@ -257,8 +271,10 @@
             </div>
             <div class="decoration">
                 <span class="text_deco">
-                    <p>私</p>
-                    <p>私</p>
+                    私
+                </span>
+                <span class="text_deco">
+                    私
                 </span>
                 <span class="bottomline"></span>
             </div>
@@ -280,7 +296,43 @@
         </div>
         <img class="cloud3" src="./images/cloud2.svg" alt="白い雲">
     </footer>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.your-class').slick({
+            setting- name: setting - value
+      });
+    });
+    $(document).ready(function () {
+        $('.slider').slick({
+            centerMode: true,
+            infinite: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            speed: 500,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }]
+        });
+    });
+</script>
+
 
 </html>
