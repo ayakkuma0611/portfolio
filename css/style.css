@@ -42,7 +42,7 @@ section::after {
 
 .mv_topline {
     background-color: #280db2;
-    width: 67%;
+    width: 60%;
     height: 1px;
 }
 
@@ -269,7 +269,6 @@ section h1 {
 .SKILL {
     background-image: url("../images/fish.png");
     background-position: bottom -80px;
-
 }
 
 .speech_balloon1 {
@@ -284,12 +283,12 @@ section h1 {
 
 .design-img {
     width: 300px;
-    padding-bottom: 70px;
+    margin-bottom: 20%;
 }
 
 .tool-img {
-    width: 195px;
-    padding-top: 70px;
+    width: min(195px, 40vw);
+    margin-top: 20%;
 }
 
 .programming-img {
@@ -303,12 +302,12 @@ section h1 {
 }
 
 .section-title {
-    font-size: 32px;
+    font-size: clamp(28px, 4vw, 32px);
     font-family: 'DotGothic16', sans-serif;
 }
 
 .item {
-    width: 400px;
+    width: 90%;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -344,9 +343,10 @@ section h1 {
 }
 
 .design_skill {
+    width: min(900px, 85%);
     display: flex;
     align-items: center;
-    max-width: 900px;
+    max-width: 63%;
     background-color: #fff;
     margin: 0 auto;
     margin-bottom: 45px;
@@ -354,11 +354,13 @@ section h1 {
 }
 
 .programming_skill {
+    width: min(900px, 85%);
     display: flex;
     align-items: center;
-    max-width: 900px;
+    max-width: 63%;
     background-color: #fff;
     margin: 0 auto;
+
 }
 
 .designtool {
@@ -454,9 +456,11 @@ section h1 {
 }
 
 .lovebird {
+    width: 70%;
+    margin-left: auto;
     margin-top: -10%;
     display: flex;
-    gap: 30px;
+    gap: 5%;
     justify-content: flex-end;
 }
 
@@ -583,7 +587,7 @@ section h1 {
 }
 
 .sweat_img {
-    width: 100%;
+    width: 33%;
     max-width: 550px;
 }
 
@@ -597,7 +601,7 @@ section h1 {
 }
 
 .sweat1_text {
-    font-size: 20px;
+    font-size: clamp(14px, 2.5vw, 20px);
     text-align: right;
     background-color: #fff;
     display: inline;
@@ -612,8 +616,15 @@ section h1 {
 }
 
 .mouth_text {
+    position: absolute;
     font-family: 'DotGothic16', sans-serif;
     font-size: 16px;
+    top: 100%;
+    right: -29%;
+}
+
+.sp {
+    display: none;
 }
 
 .mouth {
@@ -628,23 +639,22 @@ section h1 {
     position: relative;
 }
 
-.mouth img {
-    position: absolute;
-}
-
 .mouth1 {
+    position: relative;
     width: 15vw;
     top: 0;
     left: 0;
 }
 
 .mouth2 {
+    position: absolute;
     width: 19vw;
     top: -6vw;
     left: 4vw;
 }
 
 .mouth3 {
+    position: absolute;
     width: 23vw;
     top: -13vw;
     left: 8vw;
@@ -658,7 +668,7 @@ section h1 {
 }
 
 .sweat2_text {
-    font-size: 20px;
+    font-size: clamp(14px, 2.5vw, 20px);
     margin-left: -20%;
     background-color: #fff;
     display: inline;
@@ -670,13 +680,15 @@ section h1 {
 
 .dog_text {
     font-family: 'DotGothic16', sans-serif;
+    position: absolute;
+    top: -15%;
+    left: 20%;
+    font-size: 16px;
 }
 
 .dog {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 40%;
+    left: -20%;
     top: 85%;
 
 }
@@ -685,19 +697,16 @@ section h1 {
     position: relative;
 }
 
-.dog img {
-    position: absolute;
-}
-
 .dog1 {
+    position: relative;
     max-width: 292px;
     width: 20vw;
     top: 0vw;
     left: 0vw;
-
 }
 
 .dog2 {
+    position: absolute;
     max-width: 232px;
     width: 16vw;
     top: -1vw;
@@ -705,6 +714,7 @@ section h1 {
 }
 
 .dog3 {
+    position: absolute;
     max-width: 176px;
     width: 12vw;
     top: -2vw;
@@ -763,11 +773,292 @@ footer a {
     letter-spacing: 0.12em;
 }
 
-@media (max-width: 767px) {
+
+
+@media screen and (max-width: 767px) {
+    br {
+        display: none;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .speech_wrap1 h2 {
+        top: 25px;
+        left: 35px;
+    }
+
+    .speech_wrap2 h2 {
+        top: 20px;
+        left: 40px;
+    }
+
+    .speech_wrap3 h2 {
+        top: 30px;
+        left: 25px;
+    }
+
+    .speech_balloon1 {
+        width: 160px;
+    }
+
+    .speech_balloon2 {
+        width: 170px;
+    }
+
+    .speech_balloon3 {
+        width: 168px;
+    }
+
+    .title,
+    section h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .speech_wrap1,
+    .speech_wrap2,
+    .speech_wrap3 {
+        margin: 0 auto;
+        width: fit-content;
+    }
 
     /* --------MAIN VISUAL--------- */
 
     .mainvisual img {
         width: 80%;
     }
+
+    .catch {
+        font-size: 14px;
+    }
+
+    /* -------SKILL-------- */
+
+    .SKILL {
+        background-image: url("../images/SP_fish.png");
+    }
+
+    .design_skill {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 45px;
+        margin-top: 54px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .programming_skill {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .skill_text {
+        font-size: 16px;
+    }
+
+    /* ------WORKS--------- */
+    .slider .slick-slide {
+        transform: scale(0.8);
+    }
+
+    .slider .slick-center {
+        transform: scale(1);
+    }
+
+    .arrow {
+        width: 10%;
+    }
+
+    .arrow_wrap {
+        width: 90%;
+        left: 5%;
+    }
+
+    /* -------ABOUT-------- */
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .blue_cloud {
+        width: 125vw;
+        margin-left: 2%;
+    }
+
+    .profile_text {
+        font-size: 18px;
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .kana {
+        font-size: 18px;
+        margin-top: 10%;
+    }
+
+    .lastname {
+        font-size: clamp(58px, 12vw, 90px);
+        top: 4%;
+        left: 17%;
+    }
+
+    .firstname {
+        top: 54%;
+        left: 57%;
+        font-size: clamp(58px, 12vw, 90px);
+    }
+
+    .cockatiel {
+        width: 25%;
+        top: 2%;
+        right: 14%;
+    }
+
+    .hobby {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .hobby_text {
+        width: 100%;
+        letter-spacing: 0;
+    }
+
+    .hobby_text1 {
+        letter-spacing: 0em;
+        font-size: 34px;
+        text-align: center;
+        margin-left: 4%;
+    }
+
+    .hobby_text2,
+    .hobby_text3 {
+        width: 90%;
+        text-align: right;
+        font-size: 18px;
+        margin-left: 4%;
+    }
+
+    .sweat1_text,
+    .sweat2_text {
+        font-size: 20px;
+    }
+
+    .dog_text {
+        font-size: 12px;
+        display: inline-block;
+        transform: rotate(-20deg);
+        top: -91%;
+        left: 47%;
+    }
+
+    .mouth_text {
+        font-size: 12px;
+        top: -130%;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: inline-block;
+        transform: rotate(20deg);
+    }
+
+    .dog {
+        left: 50%;
+        top: 0%;
+    }
+
+    .dog1 {
+        top: -24vw;
+        left: 20vw;
+        width: 32vw;
+    }
+
+    .dog2 {
+        top: -11vw;
+        left: 16vw;
+        width: 22vw;
+    }
+
+    .dog3 {
+        width: 17vw;
+        top: -2vw;
+        left: 12vw;
+    }
+
+    .mouth {
+        right: 65%;
+        top: 16%;
+    }
+
+    .mouth1 {
+        width: 18vw;
+    }
+
+    .mouth2 {
+        left: -9vw;
+        width: 22vw;
+        top: -8vw;
+    }
+
+    .mouth3 {
+        width: 30vw;
+        top: -20vw;
+        left: -20vw;
+    }
+
+    .lovebird {
+        width: 100%;
+        margin-top: 8%;
+    }
+
+    .sweat_1,
+    .sweat_2 {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sweat_img {
+        width: 80%;
+    }
+
+    /* -------FOOTER------  */
+    .cloud3 {
+        width: 270%;
+        transform: translate(-50%, -100%);
+        pointer-events: none;
+    }
+
+
 }
