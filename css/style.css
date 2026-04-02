@@ -87,6 +87,10 @@ section::after {
     align-items: flex-end;
 }
 
+.sp_decoration {
+    display: none;
+}
+
 .top_textdeco {
     position: relative;
     font-size: clamp(16px, 5vw, 48px);
@@ -163,9 +167,14 @@ section h1 {
     padding-top: 25px;
 }
 
+.pc_nav {
+    width: 30%;
+    margin-right: 4%;
+}
+
 .pc_nav ul {
     display: flex;
-    gap: 70%;
+    justify-content: space-between;
     letter-spacing: 0.12em;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
@@ -204,6 +213,9 @@ section h1 {
     letter-spacing: 0.12em
 }
 
+.sp_title {
+    display: none;
+}
 
 .mv-wrap {
     position: relative;
@@ -282,22 +294,26 @@ section h1 {
 }
 
 .design-img {
-    width: 300px;
+    width: 100%;
+    min-width: 241px;
     margin-bottom: 20%;
 }
 
 .tool-img {
-    width: min(195px, 40vw);
+    width: min(195px, 19vw);
     margin-top: 20%;
+    min-width: 160px;
 }
 
 .programming-img {
-    width: 385px;
+    width: 100%;
+    min-width: 241px;
     padding-bottom: 86px;
 }
 
 .language-img {
-    width: 279px;
+    width: 68%;
+    min-width: 241px;
     padding-top: 86px;
 }
 
@@ -330,6 +346,7 @@ section h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     letter-spacing: 0.12em;
+    margin: 0 auto;
 }
 
 .skill_text {
@@ -343,23 +360,25 @@ section h1 {
 }
 
 .design_skill {
-    width: min(900px, 85%);
+    max-width: 900px;
+    width: 80%;
     display: flex;
     align-items: center;
-    max-width: 63%;
     background-color: #fff;
     margin: 0 auto;
     margin-bottom: 45px;
     margin-top: 54px;
+    min-width: 650px;
 }
 
 .programming_skill {
-    width: min(900px, 85%);
+    max-width: 900px;
+    width: 80%;
     display: flex;
     align-items: center;
-    max-width: 63%;
     background-color: #fff;
     margin: 0 auto;
+    min-width: 650px;
 
 }
 
@@ -367,12 +386,14 @@ section h1 {
     text-align: center;
     padding-left: 66px;
     padding-right: 84px;
+    width: 50%;
 }
 
 .programming_language {
     text-align: center;
     padding-left: 37px;
     padding-right: 30px;
+    width: 50%;
 }
 
 /* --------------WORKS-------------- */
@@ -550,6 +571,7 @@ section h1 {
     font-size: 48px;
     letter-spacing: 0.2em;
     margin-top: 45%;
+    white-space: nowrap;
 }
 
 
@@ -563,6 +585,10 @@ section h1 {
     font-size: 20px;
     line-height: 2;
     margin-top: 10%;
+}
+
+.sp {
+    display: none;
 }
 
 .fuji {
@@ -829,9 +855,75 @@ footer a {
     }
 
     /* --------MAIN VISUAL--------- */
+    .header_wrap {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .sp_title {
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.12em;
+        margin-top: 6%;
+        margin-left: 4%;
+    }
+
+    .line {
+        width: 2px;
+        height: 28px;
+        background-color: #d11c66;
+    }
+
+    .sp_text_deco:nth-child(1) {
+        left: 2%;
+    }
+
+    .sp_text_deco:nth-child(2) {
+        right: 2%;
+    }
+
+    .sp_decoration {
+        position: relative;
+        font-size: clamp(16px, 5vw, 48px);
+        color: #d11c66;
+        font-family: 'DotGothic16', sans-serif;
+        display: flex;
+        align-items: center;
+        margin-top: 4%;
+        margin-bottom: 30%;
+
+    }
+
+    .sp_text_deco {
+        position: absolute;
+    }
+
+    .sp_bottomline {
+        display: block;
+        margin: 0 auto;
+        background-color: #280db2;
+        width: 83%;
+        height: 1px;
+    }
 
     .mainvisual img {
         width: 80%;
+    }
+
+    .theme {
+        flex-direction: column;
+        height: 140%;
+    }
+
+    .theme>span {
+        flex-direction: column;
+    }
+
+    .cloud1 {
+        width: 245%;
     }
 
     .catch {
@@ -852,6 +944,8 @@ footer a {
         margin-top: 54px;
         padding-top: 10%;
         padding-bottom: 10%;
+        width: 85%;
+        min-width: 0;
     }
 
     .programming_skill {
@@ -860,6 +954,12 @@ footer a {
         margin: 0 auto;
         padding-top: 10%;
         padding-bottom: 10%;
+        width: 85%;
+        min-width: 0;
+    }
+
+    .skill_text {
+        text-align: center;
     }
 
     .item {
@@ -941,6 +1041,38 @@ footer a {
         right: 14%;
     }
 
+    .hobby_text,
+    .hobby_illust {
+        display: contents;
+    }
+
+    .hobby_text1 {
+        order: 2;
+    }
+
+    .sp {
+        display: inline;
+    }
+
+    .beko {
+        order: 1;
+        margin-left: 33%;
+        margin-top: 20%;
+    }
+
+    .nasu {
+        order: 3;
+        margin-left: auto;
+        margin-right: 20%;
+        transform: rotate(25deg)
+    }
+
+    .fuji {
+        order: 4;
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
     .hobby {
         flex-direction: column;
         margin: 0;
@@ -952,10 +1084,11 @@ footer a {
     }
 
     .hobby_text1 {
-        letter-spacing: 0em;
+        letter-spacing: 0.02em;
         font-size: 34px;
         text-align: center;
-        margin-left: 4%;
+        margin: 0 auto;
+        margin-top: 20%;
     }
 
     .hobby_text2,
@@ -964,6 +1097,14 @@ footer a {
         text-align: right;
         font-size: 18px;
         margin-left: 4%;
+    }
+
+    .hobby_text2 {
+        order: 5;
+    }
+
+    .hobby_text3 {
+        order: 6;
     }
 
     .sweat1_text,
@@ -977,11 +1118,13 @@ footer a {
         transform: rotate(-20deg);
         top: -91%;
         left: 47%;
+        white-space: nowrap;
     }
 
     .mouth_text {
         font-size: 12px;
-        top: -130%;
+        top: -23vw;
+        white-space: nowrap;
     }
 
     .pc {
@@ -995,7 +1138,7 @@ footer a {
 
     .dog {
         left: 50%;
-        top: 0%;
+        top: 30%;
     }
 
     .dog1 {
@@ -1018,7 +1161,7 @@ footer a {
 
     .mouth {
         right: 65%;
-        top: 16%;
+        top: 47%;
     }
 
     .mouth1 {
@@ -1051,6 +1194,8 @@ footer a {
 
     .sweat_img {
         width: 80%;
+
+        margin-top: 50%;
     }
 
     /* -------FOOTER------  */
