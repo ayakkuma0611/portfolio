@@ -19,9 +19,7 @@ section {
 }
 
 header::before,
-header::after,
-section::before,
-section::after {
+header::after {
     content: "";
     position: absolute;
     top: 11%;
@@ -38,6 +36,32 @@ section::before {
 header::after,
 section::after {
     right: 4%;
+}
+
+.SKILL::before,
+.SKILL::after {
+    top: 100px;
+    height: 87%;
+}
+
+.WORKS::after,
+.WORKS::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    width: 1px;
+    height: 83%;
+    background-color: #280db2;
+}
+
+.ABOUT::before,
+.ABOUT::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    width: 1px;
+    height: 94%;
+    background-color: #280db2;
 }
 
 .mv_topline {
@@ -69,12 +93,6 @@ section::before {
 
 section::after {
     right: 4%;
-}
-
-.SKILL::before,
-.SKILL::after {
-    top: 100px;
-    height: 85%;
 }
 
 .decoration {
@@ -121,9 +139,42 @@ section {
 /* 各項目のタイトル */
 h1 {
     font-size: 72px;
-    letter-spacing: 0.2em;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+}
+
+.pop-text span {
+    opacity: 0;
+}
+
+.pop-text.active span {
+    animation: show 0s steps(1) forwards;
+}
+
+.pop-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.pop-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pop-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.pop-text span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.pop-text span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes show {
+    to {
+        opacity: 1;
+    }
 }
 
 h2 {
@@ -210,7 +261,8 @@ section h1 {
 .title {
     display: flex;
     align-items: center;
-    letter-spacing: 0.12em
+    letter-spacing: 0.12em;
+    padding-left: 10%;
 }
 
 .sp_title {
@@ -230,14 +282,38 @@ section h1 {
     margin: 0 auto;
 }
 
+/* ------雲アニメーション--------- */
 .cloud1 {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    width: max-content;
+    animation: cloudFlow 20s linear infinite;
 }
 
+.scroll_cloud_wrap {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll_cloud {
+    flex-shrink: 0;
+}
+
+@keyframes cloudFlow {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ---------------------------- */
 .theme {
     position: absolute;
     top: 50%;
@@ -281,6 +357,18 @@ section h1 {
 .SKILL {
     background-image: url("../images/fish.png");
     background-position: bottom -80px;
+    background-repeat: repeat-x;
+    animation: flow 20s linear infinite;
+}
+
+@keyframes flow {
+    from {
+        background-position: 0 bottom;
+    }
+
+    to {
+        background-position: -1000px bottom;
+    }
 }
 
 .speech_balloon1 {
@@ -294,19 +382,19 @@ section h1 {
 }
 
 .design-img {
-    width: 100%;
+    width: 70%;
     min-width: 241px;
-    margin-bottom: 20%;
+    margin-bottom: 45px;
 }
 
 .tool-img {
     width: min(195px, 19vw);
-    margin-top: 20%;
+    margin-top: 45px;
     min-width: 160px;
 }
 
 .programming-img {
-    width: 100%;
+    width: 90%;
     min-width: 241px;
     padding-bottom: 86px;
 }
@@ -318,7 +406,7 @@ section h1 {
 }
 
 .section-title {
-    font-size: clamp(28px, 4vw, 32px);
+    font-size: clamp(28px, 1.5vw, 32px);
     font-family: 'DotGothic16', sans-serif;
 }
 
@@ -384,15 +472,11 @@ section h1 {
 
 .designtool {
     text-align: center;
-    padding-left: 66px;
-    padding-right: 84px;
     width: 50%;
 }
 
 .programming_language {
     text-align: center;
-    padding-left: 37px;
-    padding-right: 30px;
     width: 50%;
 }
 
@@ -627,7 +711,7 @@ section h1 {
 }
 
 .sweat1_text {
-    font-size: clamp(14px, 2.5vw, 20px);
+    font-size: clamp(14px, 1.5vw, 20px);
     text-align: right;
     background-color: #fff;
     display: inline;
@@ -694,7 +778,7 @@ section h1 {
 }
 
 .sweat2_text {
-    font-size: clamp(14px, 2.5vw, 20px);
+    font-size: clamp(14px, 1.5vw, 20px);
     margin-left: -20%;
     background-color: #fff;
     display: inline;
@@ -799,12 +883,13 @@ footer a {
     letter-spacing: 0.12em;
 }
 
+.mail_address:hover {
+    background: #fff;
+    color: #280db2;
+}
 
 
 @media screen and (max-width: 767px) {
-    br {
-        display: none;
-    }
 
     h1 {
         font-size: 64px;
@@ -956,6 +1041,11 @@ footer a {
         padding-bottom: 10%;
         width: 85%;
         min-width: 0;
+    }
+
+    .designtool,
+    .programming_language {
+        width: 100%;
     }
 
     .skill_text {
@@ -1116,7 +1206,7 @@ footer a {
         font-size: 12px;
         display: inline-block;
         transform: rotate(-20deg);
-        top: -91%;
+        top: -100%;
         left: 47%;
         white-space: nowrap;
     }
@@ -1137,8 +1227,9 @@ footer a {
     }
 
     .dog {
+        order: 1;
         left: 50%;
-        top: 30%;
+        top: 50vw;
     }
 
     .dog1 {
@@ -1160,8 +1251,9 @@ footer a {
     }
 
     .mouth {
+        order: 4;
         right: 65%;
-        top: 47%;
+        top: 46vw;
     }
 
     .mouth1 {
@@ -1187,15 +1279,43 @@ footer a {
 
     .sweat_1,
     .sweat_2 {
+        display: flex;
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
     }
 
     .sweat_img {
+        order: 2;
         width: 80%;
-
         margin-top: 50%;
+    }
+
+    .sweat_1 .sweat_img {
+        order: 5;
+    }
+
+    .sweat1_text {
+        display: block;
+        width: 85%;
+        margin-left: 4%;
+    }
+
+    .sweat2_text {
+        display: block;
+        width: 85%;
+        margin-left: auto;
+        margin-right: 4%;
+    }
+
+    .sweat1_text_wrap {
+        order: 6;
+        margin-top: -10%;
+    }
+
+    .sweat2_text_wrap {
+        order: 3;
+        margin-top: -10%;
     }
 
     /* -------FOOTER------  */

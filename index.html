@@ -81,9 +81,13 @@
                     <source srcset="./images/SP_MV-80.jpg" media="(max-width: 767px)">
                     <img src="./images/mainvisual.jpg" alt="メインビジュアル">
                 </picture>
-                <picture class="cloud1">
-                    <img src="./images/cloud1.svg" alt="雲">
-                </picture>
+                <div class="scroll_cloud_wrap">
+                    <ul class="cloud1">
+                        <li class="scroll_cloud"><img src="./images/cloud1.svg" alt="雲"></li>
+                        <li class="scroll_cloud"><img src="./images/cloud1.svg" alt="雲"></li>
+                        <li class="scroll_cloud"><img src="./images/cloud1.svg" alt="雲"></li>
+                    </ul>
+                </div>
             </div>
             <p class="catch">★☆玩趣 = 遊び心、ワクワクする楽しさ★☆</p>
         </div>
@@ -106,7 +110,13 @@
                     技
                 </span>
             </div>
-            <h1>SKILL</h1>
+            <h1 class="pop-text">
+                <span>S</span>
+                <span>K</span>
+                <span>I</span>
+                <span>L</span>
+                <span>L</span>
+            </h1>
             <div class="speech_wrap1">
                 <img class="speech_balloon1" src="./images/skill_frame.svg" alt="吹き出し1">
                 <h2>できること</h2>
@@ -186,7 +196,13 @@
                     作
                 </span>
             </div>
-            <h1>WORKS</h1>
+            <h1 class="pop-text">
+                <span>W</span>
+                <span>O</span>
+                <span>R</span>
+                <span>K</span>
+                <span>S</span>
+            </h1>
             <div class="speech_wrap2">
                 <img class="speech_balloon2" src="./images/works_frame.svg" alt="吹き出し2">
                 <h2>つくったもの</h2>
@@ -200,9 +216,11 @@
                     <div class="work"><img src="./images/kadai_takahashi_01.jpg">
                         <p class="work-title">バナー制作</p>
                     </div>
-                    <div class="work"><img src="./images/kadai2_takahashi_3.jpg">
-                        <p class="work-title">アイスクリーム</p>
-                    </div>
+                    <div class="work"><a
+                            href="file:///Users/takahashi-ayane/Desktop/icecream_banner/works_ice.html"><img
+                                src="./images/kadai2_takahashi_3.jpg">
+                            <p class="work-title">アイスクリーム</p>
+                        </a></div>
                     <div class="work"><img src="./images/burger_01.jpg">
                         <p class="work-title">バーガー広告1</p>
                     </div>
@@ -237,7 +255,13 @@
                     私
                 </span>
             </div>
-            <h1>ABOUT</h1>
+            <h1 class="pop-text">
+                <span>A</span>
+                <span>B</span>
+                <span>O</span>
+                <span>U</span>
+                <span>T</span>
+            </h1>
             <div class="speech_wrap3">
                 <img class="speech_balloon3" src="./images/abou_frame.svg" alt="吹き出し3">
                 <h2>わたしについて</h2>
@@ -289,7 +313,7 @@
             <div class="sweat">
                 <div class="sweat_2">
                     <img class="sweat_img" src="./images/sweat1-80.jpg" alt="スウェットの写真2">
-                    <div>
+                    <div class="sweat2_text_wrap">
                         <p class="sweat2_text">お友達の｢ザムちゃん｣のお誕生日に送った似顔絵スウェット。
                             <br>キラキラしたお顔に反する毒舌で独特な思考をもつ彼女にピッタリな
                             <br>毒々しいカラーがポイントです。
@@ -343,11 +367,9 @@
 
         <h1 class="footer_title">CONTACT</h1>
         <p class="footer_text">↓↓↓お気軽にご連絡ください↓↓↓</p>
-        <p>
-            <a href="mailto:ayane1999takahashi@gmail.com">
-                ayane1999takahashi@gmail.com
-            </a>
-        </p>
+        <a class="mail_address" href="mailto:ayane1999takahashi@gmail.com">
+            ayane1999takahashi@gmail.com
+        </a>
         <div class="copyright">
             <p>©2026ayanetakahashi</p>
         </div>
@@ -357,6 +379,7 @@
     </footer>
 
     <script type="text/javascript">
+
         $(document).ready(function () {
             $('.slider').slick({
                 centerMode: true,
@@ -378,6 +401,19 @@
                     }
                 },]
             });
+            const target = document.querySelector('.pop-text');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        target.classList.add('active');
+                    }
+                });
+            }, {
+                rootMargin: "-100px 0px"
+            });
+
+            observer.observe(target);
         });
     </script>
 </body>
