@@ -137,7 +137,7 @@ section {
 
 
 /* 各項目のタイトル */
-h1 {
+h2 {
     font-size: 72px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -177,7 +177,7 @@ h1 {
     }
 }
 
-h2 {
+h3 {
     font-size: 20px;
     letter-spacing: 0.1em;
     color: #e52e8e;
@@ -193,7 +193,7 @@ h2 {
 }
 
 .title,
-section h1 {
+section h2 {
     margin-left: 15%;
 }
 
@@ -230,7 +230,11 @@ section h1 {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    letter-spacing: 0.12em;
+}
+
+.sp_btn,
+.sp_nav {
+    display: none;
 }
 
 .main {
@@ -287,7 +291,6 @@ section h1 {
     width: 100%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     width: max-content;
@@ -300,16 +303,17 @@ section h1 {
 }
 
 .scroll_cloud {
+    width: 100vw;
     flex-shrink: 0;
 }
 
 @keyframes cloudFlow {
     from {
-        transform: translateX(0);
+        transform: translate(0, -50%);
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -343,10 +347,36 @@ section h1 {
 
 .catch {
     font-size: 18px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 88px;
     font-family: 'DotGothic16', sans-serif;
+    animation: scrollText 10s steps(20) infinite;
+}
+
+.catch_scroll {
+    margin: 30px auto 50px;
+    width: 370px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.catch_wrap {
+    display: flex;
+    width: max-content;
+    animation: scrollLoop 8s steps(20) infinite;
+}
+
+.catch_wrap p {
+    margin: 0;
+    padding-right: 20px;
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .mv_bottom_deco {
@@ -358,7 +388,7 @@ section h1 {
     background-image: url("../images/fish.png");
     background-position: bottom -80px;
     background-repeat: repeat-x;
-    animation: flow 20s linear infinite;
+    animation: flow 40s linear infinite;
 }
 
 @keyframes flow {
@@ -367,7 +397,7 @@ section h1 {
     }
 
     to {
-        background-position: -1000px bottom;
+        background-position: -1580px bottom;
     }
 }
 
@@ -375,7 +405,7 @@ section h1 {
     display: block;
 }
 
-.speech_wrap1 h2 {
+.speech_wrap1 h3 {
     position: absolute;
     top: 32px;
     left: 40px;
@@ -489,7 +519,7 @@ section h1 {
     display: block;
 }
 
-.speech_wrap2 h2 {
+.speech_wrap2 h3 {
     position: absolute;
     top: 30px;
     left: 60px;
@@ -554,7 +584,7 @@ section h1 {
     display: block;
 }
 
-.speech_wrap3 h2 {
+.speech_wrap3 h3 {
     position: absolute;
     top: 40px;
     left: 40px;
@@ -567,6 +597,57 @@ section h1 {
     display: flex;
     gap: 5%;
     justify-content: flex-end;
+}
+
+.lovebird img {
+    opacity: 1;
+    animation: hidebird 5s steps(2) infinite;
+}
+
+.lovebird img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.lovebird img:nth-child(2) {
+    animation-delay: -1.3s;
+}
+
+.lovebird img:nth-child(3) {
+    animation-delay: -2.7s;
+}
+
+.lovebird img:nth-child(4) {
+    animation-delay: -0.8s;
+}
+
+.lovebird img:nth-child(5) {
+    animation-delay: -3.9s;
+}
+
+.lovebird img:nth-child(6) {
+    animation-delay: -1.9s;
+}
+
+.lovebird img:nth-child(7) {
+    animation-delay: -4.6s;
+}
+
+@keyframes hidebird {
+    0% {
+        opacity: 0;
+    }
+
+    14% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .cockatiel {
@@ -619,6 +700,7 @@ section h1 {
 .profile {
     margin-top: 8%;
     display: flex;
+    align-items: center;
 }
 
 .profile-img {
@@ -632,8 +714,13 @@ section h1 {
 
 .profile_text {
     font-size: 20px;
-    line-height: 2;
+    line-height: 2.5;
     margin-left: 10%;
+    width: 60%;
+}
+
+.profile_name {
+    width: 60%;
 }
 
 .hobby {
@@ -888,28 +975,40 @@ footer a {
     color: #280db2;
 }
 
+@media screen and (max-width:1200px) {
+    .profile_text {
+        font-size: 16px;
+        line-height: 2;
+        margin-left: 10%;
+        width: 60%;
+    }
+
+    .profile_name {
+        width: 60%;
+    }
+}
 
 @media screen and (max-width: 767px) {
 
-    h1 {
+    h2 {
         font-size: 64px;
     }
 
-    h2 {
+    h3 {
         font-size: 16px;
     }
 
-    .speech_wrap1 h2 {
+    .speech_wrap1 h3 {
         top: 25px;
         left: 35px;
     }
 
-    .speech_wrap2 h2 {
+    .speech_wrap2 h3 {
         top: 20px;
         left: 40px;
     }
 
-    .speech_wrap3 h2 {
+    .speech_wrap3 h3 {
         top: 30px;
         left: 25px;
     }
@@ -927,7 +1026,7 @@ footer a {
     }
 
     .title,
-    section h1 {
+    section h2 {
         margin-left: 0;
         text-align: center;
     }
@@ -937,6 +1036,32 @@ footer a {
     .speech_wrap3 {
         margin: 0 auto;
         width: fit-content;
+    }
+
+    /* ------ハンバーガーボタン-------- */
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+    }
+
+    .sp_btn span {
+        display: block;
+        width: 35px;
+        height: 3px;
+        background: #280db2;
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .sp span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 3px;
+        background: #280db2;
+        border-radius: 2px;
     }
 
     /* --------MAIN VISUAL--------- */
@@ -1009,6 +1134,10 @@ footer a {
 
     .cloud1 {
         width: 245%;
+    }
+
+    .scroll_cloud {
+        width: 240vw;
     }
 
     .catch {

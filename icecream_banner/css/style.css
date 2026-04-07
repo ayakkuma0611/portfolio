@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+header {
+    background-color: #280db2;
+    text-align: center;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1 {
+    width: 640px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.12em;
+    padding: 45px 0;
+    display: inline-block;
+    margin: 150px 0 190px;
+    font-size: 72px;
+}
+
+.works_title {
+    width: 70%;
+    margin: 150px auto 0;
+    border-bottom: 2px dotted #280db2;
+    color: #280db2;
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+.sub_title {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+img {
+    width: 65%;
+    display: block;
+    margin: 50px auto 107px;
+}
+
+.detail_wrap {
+    background-color: #280db2;
+    color: #fff;
+    padding: 130px 0 0;
+    margin: 0 auto;
+}
+
+.detail_text {
+    font-size: 20px;
+    width: 41%;
+    margin: 0 auto;
+}
+
+.text_wrap {
+    font-size: 24px;
+    width: 63%;
+    margin: 0 auto;
+}
+
+.tool {
+    margin-top: 80px;
+    border-top: 2px dotted #fff;
+}
+
+.tool,
+.scope,
+.duration {
+    border-bottom: 2px dotted #fff;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    gap: 25%;
+    padding-left: 10%;
+}
+
+.tool_title,
+.scope_title,
+.duration_title {
+    min-width: 120px;
+    text-align: center;
+}
+
+.tool_text,
+.scope_text,
+.duration_text {
+    text-align: left;
+}
+
+.button {
+    text-align: center;
+}
+
+.button a {
+    font-family: 'DotGothic16', sans-serif;
+    color: #280db2;
+    font-size: 24px;
+    text-align: center;
+    background-color: #fff;
+    margin: 120px 10%;
+    padding: 25px 125px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.pc {
+    display: inline;
+}
+
+.sp {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: inline;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 64px;
+        border: none;
+        margin: 65px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .sub_title {
+        font-size: 18px;
+        margin: 0 0 12px;
+    }
+
+    .works_title {
+        margin-top: 45px;
+    }
+
+    img {
+        margin-bottom: 70px;
+    }
+
+    .detail_wrap {
+        padding: 65px 0 0;
+    }
+
+    .detail_text {
+        width: 80%;
+    }
+
+    .text_wrap {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .tool,
+    .scope,
+    .duration {
+        gap: 30%;
+        padding-left: 2%;
+    }
+
+    .button a {
+        font-size: 20px;
+        margin: 70px 10%;
+    }
+}
