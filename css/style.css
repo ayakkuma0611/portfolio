@@ -7,6 +7,31 @@ body {
     overflow-x: hidden;
 }
 
+.anim-box {
+    opacity: 0;
+}
+
+.anim-box.fadeup.is-animated {
+    animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ------文字装飾と仕切り線----- */
 .mv_area,
 section {
@@ -192,7 +217,6 @@ h3 {
     margin-top: 0.4%;
 }
 
-.title,
 section h2 {
     margin-left: 15%;
 }
@@ -238,7 +262,7 @@ section h2 {
 }
 
 .main {
-    font-size: clamp(32px, 5vw, 72px);
+    font-size: 72px;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -263,10 +287,13 @@ section h2 {
 }
 
 .title {
+    width: 90%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     letter-spacing: 0.12em;
-    padding-left: 10%;
+    margin-bottom: 1%;
+    margin: 0 auto;
 }
 
 .sp_title {
@@ -282,7 +309,7 @@ section h2 {
 .mainvisual img {
     width: 90%;
     display: block;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -303,7 +330,7 @@ section h2 {
 }
 
 .scroll_cloud {
-    width: 100vw;
+    width: 105vw;
     flex-shrink: 0;
 }
 
@@ -323,7 +350,7 @@ section h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 85%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     z-index: 2;
@@ -348,7 +375,6 @@ section h2 {
 .catch {
     font-size: 18px;
     font-family: 'DotGothic16', sans-serif;
-    animation: scrollText 10s steps(20) infinite;
 }
 
 .catch_scroll {
@@ -418,7 +444,7 @@ section h2 {
 }
 
 .tool-img {
-    width: min(195px, 19vw);
+    width: 45%;
     margin-top: 45px;
     min-width: 160px;
 }
@@ -458,7 +484,7 @@ section h2 {
     width: 150px;
 }
 
-.title {
+.tool_title {
     font-size: 20px;
     padding-bottom: 25px;
     font-family: 'Poppins', sans-serif;
@@ -469,6 +495,7 @@ section h2 {
 
 .skill_text {
     font-size: 12px;
+    width: 185px;
 }
 
 .about_skill {
@@ -503,11 +530,13 @@ section h2 {
 .designtool {
     text-align: center;
     width: 50%;
+    margin-right: 3%;
 }
 
 .programming_language {
     text-align: center;
     width: 50%;
+    margin-right: 3%;
 }
 
 /* --------------WORKS-------------- */
@@ -591,7 +620,7 @@ section h2 {
 }
 
 .lovebird {
-    width: 70%;
+    width: 50%;
     margin-left: auto;
     margin-top: -10%;
     display: flex;
@@ -725,7 +754,7 @@ section h2 {
 
 .hobby {
     display: flex;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .hobby_illust {
@@ -736,6 +765,7 @@ section h2 {
 
 .hobby_text {
     width: 47%;
+    margin-right: 10%;
 }
 
 .hobby_text1 {
@@ -765,17 +795,55 @@ section h2 {
 .fuji {
     width: 75%;
     margin-left: 25%;
+    animation-duration: 2.2s;
+    animation-delay: -0.3s;
+
 }
 
 .nasu {
     width: 17%;
     margin-top: 20%;
+    animation-duration: 1.6s;
+    animation-delay: -1s;
+
 }
 
 .beko {
     width: 40%;
     margin-left: 8%;
     margin-top: 10%;
+    animation-delay: 0s;
+    animation-duration: 2.8s;
+    animation-delay: -0.6s;
+
+}
+
+.hobby_illust img {
+    animation-name: shake;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .sweat {
@@ -808,8 +876,18 @@ section h2 {
     box-decoration-break: clone;
 }
 
+.sweat2_text_wrap {
+    width: 40%;
+    margin-top: 3%;
+}
+
 .sweat1_text_wrap {
     text-align: right;
+    width: 50%;
+    margin-right: -10%;
+    position: relative;
+    z-index: 999;
+    margin-bottom: 3%;
 }
 
 .mouth_text {
@@ -836,11 +914,21 @@ section h2 {
     position: relative;
 }
 
+.mouth_wrap img {
+    opacity: 0;
+    animation-name: showMouth;
+    animation-duration: 3s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+
+}
+
 .mouth1 {
     position: relative;
     width: 15vw;
     top: 0;
     left: 0;
+    animation-delay: 0s;
 }
 
 .mouth2 {
@@ -848,6 +936,7 @@ section h2 {
     width: 19vw;
     top: -6vw;
     left: 4vw;
+    animation-delay: 0.5s;
 }
 
 .mouth3 {
@@ -855,6 +944,21 @@ section h2 {
     width: 23vw;
     top: -13vw;
     left: 8vw;
+    animation-delay: 1s;
+}
+
+@keyframes showMouth {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .sweat_2 {
@@ -890,8 +994,12 @@ section h2 {
 
 }
 
-.dog_wrap {
-    position: relative;
+.dog_wrap img {
+    opacity: 0;
+    animation-name: showDog;
+    animation-duration: 3s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
 }
 
 .dog1 {
@@ -900,6 +1008,7 @@ section h2 {
     width: 20vw;
     top: 0vw;
     left: 0vw;
+    animation-delay: 1s;
 }
 
 .dog2 {
@@ -908,6 +1017,7 @@ section h2 {
     width: 16vw;
     top: -1vw;
     left: 8vw;
+    animation-delay: 0.5s;
 }
 
 .dog3 {
@@ -916,6 +1026,21 @@ section h2 {
     width: 12vw;
     top: -2vw;
     left: 14vw;
+    animation-delay: 0s;
+}
+
+@keyframes showDog {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 main {
@@ -924,10 +1049,31 @@ main {
 
 /* ------------CONTACT--------------- */
 .cloud3 {
-    width: 100%;
     position: absolute;
-    transform: translate(-50%, -100%);
     pointer-events: none;
+    display: flex;
+    width: max-content;
+    animation: cloudFlow2 20s linear infinite;
+}
+
+.scroll_cloud_wrap2 {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll_cloud2 {
+    width: 100vw;
+    flex-shrink: 0;
+}
+
+@keyframes cloudFlow2 {
+    from {
+        transform: translate(0, -50%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
 }
 
 footer {
@@ -942,12 +1088,14 @@ footer {
     padding: 10px 0;
     display: inline-block;
     margin-top: 92px;
+    letter-spacing: 0.2em;
 }
 
 .footer_text {
     font-size: 24px;
     margin-top: 80px;
     font-family: 'DotGothic16', sans-serif;
+    padding-right: 30px;
 }
 
 footer a {
@@ -975,6 +1123,36 @@ footer a {
     color: #280db2;
 }
 
+.contact_scroll {
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 600px;
+}
+
+.contact_wrap {
+    display: flex;
+    width: max-content;
+    animation: scrollLoop 8s steps(20) infinite;
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .scroll_cloud {
+        width: 130vw;
+
+    }
+}
+
 @media screen and (max-width:1200px) {
     .profile_text {
         font-size: 16px;
@@ -986,6 +1164,7 @@ footer a {
     .profile_name {
         width: 60%;
     }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1043,6 +1222,10 @@ footer a {
         display: block;
         height: 23px;
         cursor: pointer;
+        position: relative;
+        z-index: 1000;
+        right: 5%;
+        top: 3vw;
     }
 
     .sp_btn span {
@@ -1052,9 +1235,11 @@ footer a {
         background: #280db2;
         border-radius: 2px;
         position: relative;
+        top: 10px;
+        transition: 0.3s;
     }
 
-    .sp span::before,
+    .sp_btn span::before,
     .sp_btn span::after {
         content: "";
         display: block;
@@ -1062,15 +1247,78 @@ footer a {
         height: 3px;
         background: #280db2;
         border-radius: 2px;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background: #fff;
+    }
+
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        background: #fff;
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(40, 13, 178, 0.8);
+        z-index: 99;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 50px;
+    }
+
+    .sp_nav li {
+        color: #fff;
+        font-size: 40px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.2em;
+        font-weight: 100;
     }
 
     /* --------MAIN VISUAL--------- */
+    .sp_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .header_wrap {
         display: none;
     }
 
     .title {
         display: none;
+    }
+
+    .main {
+        margin-right: 7%;
     }
 
     .sp_title {
@@ -1132,12 +1380,13 @@ footer a {
         flex-direction: column;
     }
 
-    .cloud1 {
-        width: 245%;
-    }
-
     .scroll_cloud {
         width: 240vw;
+    }
+
+    .catch_scroll {
+        margin: 30% auto 50px;
+        width: 250px;
     }
 
     .catch {
@@ -1175,6 +1424,7 @@ footer a {
     .designtool,
     .programming_language {
         width: 100%;
+        margin: 0 auto;
     }
 
     .skill_text {
@@ -1194,6 +1444,8 @@ footer a {
 
     .skill_text {
         font-size: 16px;
+        width: 210px;
+        line-height: 1.8;
     }
 
     /* ------WORKS--------- */
@@ -1235,6 +1487,10 @@ footer a {
         margin: 0 auto;
         width: 80%;
         margin-top: 10%;
+    }
+
+    .profile_name {
+        width: 100%;
     }
 
     .kana {
@@ -1440,11 +1696,15 @@ footer a {
     .sweat1_text_wrap {
         order: 6;
         margin-top: -10%;
+        width: 90%;
+        margin-right: 7%;
     }
 
     .sweat2_text_wrap {
         order: 3;
         margin-top: -10%;
+        width: 90%;
+        margin-left: 8%;
     }
 
     /* -------FOOTER------  */
@@ -1454,5 +1714,17 @@ footer a {
         pointer-events: none;
     }
 
+    footer a {
+        width: 90%;
+        font-size: 14px;
+        padding: 5% 5%;
+    }
 
+    .contact_scroll {
+        width: 90%;
+    }
+
+    .copyright {
+        margin-top: 25%;
+    }
 }
