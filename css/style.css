@@ -32,6 +32,7 @@ body {
     }
 }
 
+
 /* ------文字装飾と仕切り線----- */
 .mv_area,
 section {
@@ -609,6 +610,62 @@ section h2 {
 }
 
 /* --------------ABOUT------------- */
+
+/* ------ドット装飾--------- */
+.dot_wrap1 {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+.dot1 {
+    position: absolute;
+    top: -55px;
+    left: 10px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.dot_wrap2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.dot2 {
+    position: absolute;
+    width: 33%;
+    pointer-events: none;
+    bottom: -50px;
+    right: -24px;
+}
+
+
+.dot3 {
+    position: absolute;
+    right: -8px;
+    bottom: 63px;
+    width: 113%;
+    pointer-events: none;
+}
+
+.dot4 {
+    position: absolute;
+    width: 120%;
+    left: 0px;
+    bottom: -200px;
+}
+
+.sp_dot1,
+.sp_dot2,
+.sp_dot3,
+.sp_dot4,
+.sp_dot5,
+.sp_dot6 {
+    display: none;
+}
+
+/* ---------------------- */
 .speech_balloon3 {
     display: block;
 }
@@ -733,12 +790,11 @@ section h2 {
 }
 
 .profile-img {
-    margin-top: 1%;
-    width: 35%;
+    margin-top: 2%;
+    width: 80%;
     max-width: 570px;
     height: auto;
-    align-self: flex-start;
-    margin-left: 8%;
+    margin-left: 17%;
 }
 
 .profile_text {
@@ -755,6 +811,7 @@ section h2 {
 .hobby {
     display: flex;
     margin-left: 10%;
+    position: relative;
 }
 
 .hobby_illust {
@@ -863,6 +920,7 @@ section h2 {
     justify-content: flex-end;
     margin-top: -10%;
     margin-right: 15%;
+    margin-bottom: 15%;
 }
 
 .sweat1_text {
@@ -896,6 +954,7 @@ section h2 {
     font-size: 16px;
     top: 100%;
     right: -29%;
+    white-space: nowrap;
 }
 
 .sp {
@@ -985,6 +1044,7 @@ section h2 {
     top: -15%;
     left: 20%;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .dog {
@@ -1053,6 +1113,7 @@ main {
     pointer-events: none;
     display: flex;
     width: max-content;
+    top: 48%;
     animation: cloudFlow2 20s linear infinite;
 }
 
@@ -1080,6 +1141,7 @@ footer {
     background-color: #280db2;
     color: #fff;
     text-align: center;
+    position: relative;
 }
 
 .footer_title {
@@ -1168,6 +1230,9 @@ footer a {
 }
 
 @media screen and (max-width: 767px) {
+    body.no-scroll {
+        overflow: hidden;
+    }
 
     h2 {
         font-size: 64px;
@@ -1319,6 +1384,8 @@ footer a {
 
     .main {
         margin-right: 7%;
+        font-size: clamp(32px, 5vw, 46px);
+
     }
 
     .sp_title {
@@ -1468,13 +1535,63 @@ footer a {
 
     /* -------ABOUT-------- */
 
+
+    /* ------ドット装飾------ */
+    .dot1,
+    .dot2,
+    .dog3,
+    .dot4 {
+        display: none;
+    }
+
+    .sp_dot1,
+    .sp_dot2,
+    .sp_dot3,
+    .sp_dot4,
+    .sp_dot5,
+    .sp_dot6 {
+        display: block;
+        position: absolute;
+    }
+
+    .dot_wrap1 {
+        width: 80%;
+    }
+
+    .sp_dot1 {
+        top: -10px;
+        right: -65px;
+        width: 135%;
+    }
+
+    .sp_dot2 {
+        top: -140px;
+        left: -10px;
+        width: 110%;
+    }
+
+    .sp_dot4 {
+        width: 45%;
+    }
+
+    .sp_dot5 {
+        width: 50%;
+    }
+
+    .sp_dot6 {
+        bottom: -165px;
+    }
+
+    /* ------------------ */
     .profile {
         flex-direction: column;
     }
 
     .profile-img {
         margin: 0 auto;
-        width: 80%;
+        margin-top: 0;
+        width: 100%;
+
     }
 
     .blue_cloud {
@@ -1709,7 +1826,6 @@ footer a {
 
     /* -------FOOTER------  */
     .cloud3 {
-        width: 270%;
         transform: translate(-50%, -100%);
         pointer-events: none;
     }
@@ -1718,6 +1834,10 @@ footer a {
         width: 90%;
         font-size: 14px;
         padding: 5% 5%;
+    }
+
+    .scroll_cloud2 {
+        width: 270vw;
     }
 
     .contact_scroll {
