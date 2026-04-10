@@ -1,9 +1,13 @@
 @charset "utf-8";
 
+.overflow {
+    overflow: hidden
+}
+
 body {
     background-color: #ebebeb;
     color: #280db2;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     overflow-x: hidden;
 }
 
@@ -165,7 +169,7 @@ section {
 /* 各項目のタイトル */
 h2 {
     font-size: 72px;
-    font-family: 'Poppins', sans-serif;
+    font-family: neulis-sans, sans-serif;
     font-weight: 500;
 }
 
@@ -253,8 +257,8 @@ section h2 {
     justify-content: space-between;
     letter-spacing: 0.12em;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: neulis-sans, sans-serif;
+    font-weight: 300;
 }
 
 .sp_btn,
@@ -265,7 +269,7 @@ section h2 {
 .main {
     font-size: 72px;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: neulis-sans, sans-serif;
     font-weight: 500;
     letter-spacing: 0.12em;
     margin-right: 3%;
@@ -275,8 +279,8 @@ section h2 {
     font-size: clamp(16px, 3vw, 32px);
     margin: 0;
     margin-left: 3%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-family: neulis-sans, sans-serif;
+    font-weight: 300;
     letter-spacing: 0.12em;
 
 }
@@ -355,7 +359,7 @@ section h2 {
     display: flex;
     justify-content: space-between;
     z-index: 2;
-    font-family: "fot-udkakugoc60-pro", sans-serif;
+    font-family: fot-udkakugoc60-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -375,7 +379,7 @@ section h2 {
 
 .catch {
     font-size: 18px;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: "DotGothic16", sans-serif;
 }
 
 .catch_scroll {
@@ -488,8 +492,8 @@ section h2 {
 .tool_title {
     font-size: 20px;
     padding-bottom: 25px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-family: neulis-sans, sans-serif;
+    font-weight: 400;
     letter-spacing: 0.12em;
     margin: 0 auto;
 }
@@ -1151,6 +1155,7 @@ footer {
     display: inline-block;
     margin-top: 92px;
     letter-spacing: 0.2em;
+    font-size: 48px;
 }
 
 .footer_text {
@@ -1166,8 +1171,8 @@ footer a {
     padding: 22px 102px;
     display: inline-block;
     margin-top: 80px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-family: neulis-sans, sans-serif;
+    font-weight: 400;
     letter-spacing: 0.12em;
 }
 
@@ -1175,8 +1180,8 @@ footer a {
     font-size: 12px;
     padding-top: 40px;
     padding-bottom: 28px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-family: neulis-sans, sans-serif;
+    font-weight: 400;
     letter-spacing: 0.12em;
 }
 
@@ -1384,8 +1389,11 @@ footer a {
 
     .main {
         margin-right: 7%;
-        font-size: clamp(32px, 5vw, 46px);
+        font-size: 46px
+    }
 
+    .name {
+        font-size: 24px;
     }
 
     .sp_title {
@@ -1398,7 +1406,7 @@ footer a {
 
     .line {
         width: 2px;
-        height: 28px;
+        height: 40px;
         background-color: #d11c66;
     }
 
@@ -1524,6 +1532,10 @@ footer a {
         transform: scale(1);
     }
 
+    .slick-track {
+        margin-top: 5%;
+    }
+
     .arrow {
         width: 10%;
     }
@@ -1539,7 +1551,7 @@ footer a {
     /* ------ドット装飾------ */
     .dot1,
     .dot2,
-    .dog3,
+    .dot3,
     .dot4 {
         display: none;
     }
@@ -1846,5 +1858,25 @@ footer a {
 
     .copyright {
         margin-top: 25%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .main {
+        font-size: 32px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .main {
+        font-size: 26px;
+    }
+
+    .name {
+        font-size: 14px;
     }
 }
