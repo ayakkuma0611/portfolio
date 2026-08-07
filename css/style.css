@@ -1952,7 +1952,12 @@ footer a {
 
     header::before,
     header::after {
-        height: 79%;
+        top: 15%;
+        height: 74%;
+    }
+
+    .sp_bottomline {
+        width: 80%;
     }
 
     .SKILL::before,
