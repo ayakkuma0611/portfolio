@@ -957,14 +957,14 @@ section h2 {
     line-height: 2;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    -webkit-transform: translateZ(0);
-    /* ← 追加 */
-    will-change: transform;
+    position: relative;
+    z-index: 990;
 }
 
 .sweat2_text_wrap {
     width: 40%;
     margin-top: 3%;
+
 }
 
 .sweat1_text_wrap {
