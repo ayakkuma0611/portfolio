@@ -333,6 +333,7 @@ section h2 {
 .scroll_cloud_wrap {
     overflow: hidden;
     width: 100%;
+    position: relative;
 }
 
 .scroll_cloud {
@@ -1125,6 +1126,7 @@ main {
 .scroll_cloud_wrap2 {
     overflow: hidden;
     width: 100%;
+    position: relative;
 }
 
 .scroll_cloud2 {
