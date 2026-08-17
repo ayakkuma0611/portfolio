@@ -310,7 +310,6 @@ section h2 {
     position: relative;
     max-width: 1500px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .mainvisual img {
@@ -1148,7 +1147,6 @@ footer {
     color: #fff;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .footer_title {
