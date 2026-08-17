@@ -944,6 +944,9 @@ section h2 {
 .sweat2_text_wrap {
     width: 40%;
     margin-top: 3%;
+    position: relative;
+    /* ← 追加 */
+    z-index: 1;
 }
 
 .sweat1_text_wrap {
