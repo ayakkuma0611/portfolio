@@ -941,11 +941,30 @@ section h2 {
     box-decoration-break: clone;
 }
 
+.sweat_2 {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-left: 15%;
+}
+
+.sweat2_text {
+    font-size: clamp(14px, 1.5vw, 20px);
+    margin-left: -20%;
+    background-color: #fff;
+    display: inline;
+    padding: 2px 8px;
+    line-height: 2;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+}
+
 .sweat2_text_wrap {
     width: 40%;
     margin-top: 3%;
     position: relative;
-    /* ← 追加 */
     z-index: 1;
 }
 
@@ -1028,24 +1047,6 @@ section h2 {
     100% {
         opacity: 1;
     }
-}
-
-.sweat_2 {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    margin-left: 15%;
-}
-
-.sweat2_text {
-    font-size: clamp(14px, 1.5vw, 20px);
-    margin-left: -20%;
-    background-color: #fff;
-    display: inline;
-    padding: 2px 8px;
-    line-height: 2;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
 }
 
 .dog_text {
