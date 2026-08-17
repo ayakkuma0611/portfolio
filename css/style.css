@@ -1950,12 +1950,12 @@ footer a {
     }
 }
 
-@media screen and (max-width:380px) {
+@media screen and (max-width:400px) {
 
     header::before,
     header::after {
-        top: 15%;
-        height: 74%;
+        top: 13%;
+        height: 77%;
     }
 
     .sp_bottomline {
