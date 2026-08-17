@@ -955,9 +955,8 @@ section h2 {
     display: inline;
     padding: 2px 8px;
     line-height: 2;
+    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    position: relative;
-    z-index: 991;
 }
 
 .sweat2_text_wrap {
