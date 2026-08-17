@@ -333,6 +333,7 @@ section h2 {
 .scroll_cloud_wrap {
     overflow: hidden;
     width: 100%;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .scroll_cloud {
