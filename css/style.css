@@ -950,7 +950,6 @@ section h2 {
 
 .sweat2_text {
     font-size: clamp(14px, 1.5vw, 20px);
-    margin-left: -20%;
     background-color: #fff;
     display: inline;
     padding: 2px 8px;
@@ -962,6 +961,7 @@ section h2 {
 .sweat2_text_wrap {
     width: 40%;
     margin-top: 3%;
+    margin-left: -8%;
     z-index: 990;
 
 }
