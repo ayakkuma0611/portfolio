@@ -4,11 +4,13 @@
     overflow: hidden
 }
 
+html,
 body {
     background-color: #ebebeb;
     color: #280db2;
     font-family: "Noto Sans JP", sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .anim-box {
